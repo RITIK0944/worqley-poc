@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WORQELY - Connect with Skilled Workers</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/dashboard.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-spinner"></div>
+        <p>Loading WORQELY...</p>
+    </div>
+
+    <!-- Main App Container -->
+    <div id="app-container" class="app-container" style="display: none;">
+        
+        <!-- Homepage -->
+        <div id="homepage" class="page">
+            <header class="header">
+                <nav class="navbar">
+                    <div class="nav-container">
+                        <div class="nav-logo">
+                            <img src="figma:asset/9e2bbd175b93fb6381c9377c8286952ef7ab87da.png" alt="WORQELY Logo" class="logo-image">
+                            <div class="logo-text-container">
+                                <h1 class="logo-text">WORQELY</h1>
+                                <span class="logo-tagline">Connect. Work. Earn.</span>
+                            </div>
+                        </div>
+                        
+                        <div class="nav-menu">
+                            <select id="language-selector" class="language-selector">
+                                <option value="en">English</option>
+                                <option value="hi">हिंदी</option>
+                                <option value="bn">বাংলা</option>
+                                <option value="te">తెలుగు</option>
+                                <option value="mr">मराठी</option>
+                                <option value="ta">தமிழ்</option>
+                                <option value="gu">ગુજરાતી</option>
+                                <option value="kn">ಕನ್ನಡ</option>
+                                <option value="ml">മലയാളം</option>
+                                <option value="pa">ਪੰਜਾਬੀ</option>
+                                <option value="or">ଓଡ଼ିଆ</option>
+                                <option value="as">অসমীয়া</option>
+                            </select>
+                            
+                            <div class="auth-buttons">
+                                <button class="btn btn-outline" data-navigate="customer-login" data-translate="customer_login">Customer Login</button>
+                                <button class="btn btn-outline" data-navigate="labor-login" data-translate="labor_login">Worker Login</button>
+                                <button class="btn btn-primary" data-navigate="admin-panel" data-translate="admin">Admin</button>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
+            <main class="main-content">
+                <!-- Hero Section -->
+                <section class="hero">
+                    <div class="hero-container">
+                        <div class="hero-content">
+                            <h1 class="hero-title" data-translate="hero_title">
+                                Find Skilled Workers<br>
+                                <span class="highlight">Instantly with AI</span>
+                            </h1>
+                            <p class="hero-description" data-translate="hero_description">
+                                Connect with verified workers across 15+ service categories through our AI-powered call assistant. Available in 12 Indian regional languages.
+                            </p>
+                            
+                            <div class="hero-buttons">
+                                <button class="btn btn-primary btn-large" data-navigate="customer-signup" data-translate="get_started">
+                                    <i class="fas fa-rocket"></i>
+                                    Get Started as Customer
+                                </button>
+                                <button class="btn btn-secondary btn-large" data-navigate="labor-signup" data-translate="join_workers">
+                                    <i class="fas fa-tools"></i>
+                                    Join as Worker
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="hero-image">
+                            <div class="hero-visual">
+                                <i class="fas fa-phone-alt phone-icon"></i>
+                                <div class="ai-indicator">
+                                    <span>AI Assistant</span>
+                                    <div class="pulse"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Statistics Section -->
+                <section class="stats-section">
+                    <div class="stats-container">
+                        <div class="stat-item">
+                            <h3 class="stat-number">10,000+</h3>
+                            <p class="stat-label" data-translate="verified_workers">Verified Workers</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="stat-number">15+</h3>
+                            <p class="stat-label" data-translate="service_categories">Service Categories</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="stat-number">50,000+</h3>
+                            <p class="stat-label" data-translate="jobs_completed">Jobs Completed</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="stat-number">12</h3>
+                            <p class="stat-label" data-translate="languages_supported">Languages Supported</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Features Section -->
+                <section class="features-section">
+                    <div class="features-container">
+                        <h2 class="section-title" data-translate="why_choose_worqley">Why Choose WORQELY?</h2>
+                        
+                        <div class="features-grid">
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <h3 data-translate="ai_call_assistant">AI Call Assistant</h3>
+                                <p data-translate="ai_description">Smart voice assistant that understands your needs and connects you with the right workers instantly.</p>
+                            </div>
+                            
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <h3 data-translate="verified_workers">Verified Workers</h3>
+                                <p data-translate="verification_description">All workers are Aadhaar verified with background checks and skill assessments.</p>
+                            </div>
+                            
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-language"></i>
+                                </div>
+                                <h3 data-translate="multi_language">Multi-Language Support</h3>
+                                <p data-translate="language_description">Communicate in your preferred language with support for 12 Indian regional languages.</p>
+                            </div>
+                            
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <h3 data-translate="quick_booking">Quick Booking</h3>
+                                <p data-translate="booking_description">Book services in minutes with instant worker matching and transparent pricing.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Service Categories Section -->
+                <section class="services-section">
+                    <div class="services-container">
+                        <h2 class="section-title" data-translate="service_categories">Service Categories</h2>
+                        
+                        <div class="services-grid">
+                            <div class="service-card">
+                                <i class="fas fa-hammer"></i>
+                                <span data-translate="construction">Construction</span>
+                            </div>
+                            <div class="service-card">
+                                <i class="fas fa-wrench"></i>
+                                <span data-translate="plumbing">Plumbing</span>
+                            </div>
+                            <div class="service-card">
+                                <i class="fas fa-bolt"></i>
+                                <span data-translate="electrical">Electrical</span>
+                            </div>
+                            <div class="service-card">
+                                <i class="fas fa-paint-brush"></i>
+                                <span data-translate="painting">Painting</span>
+                            </div>
+                            <div class="service-card">
+                                <i class="fas fa-broom"></i>
+                                <span data-translate="cleaning">Cleaning</span>
+                            </div>
+                            <div class="service-card">
+                                <i class="fas fa-car"></i>
+                                <span data-translate="driver">Driver</span>
+                            </div>
+                            <div class="service-card">
+                                <i class="fas fa-utensils"></i>
+                                <span data-translate="cooking">Cooking</span>
+                            </div>
+                            <div class="service-card">
+                                <i class="fas fa-baby"></i>
+                                <span data-translate="childcare">Childcare</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <footer class="footer">
+                <div class="footer-container">
+                    <div class="footer-section">
+                        <h3>WORQELY</h3>
+                        <p data-translate="footer_description">Connecting customers with skilled workers through AI technology.</p>
+                    </div>
+                    <div class="footer-section">
+                        <h4 data-translate="quick_links">Quick Links</h4>
+                        <ul>
+                            <li><a href="#" data-translate="about_us">About Us</a></li>
+                            <li><a href="#" data-translate="contact">Contact</a></li>
+                            <li><a href="#" data-translate="privacy_policy">Privacy Policy</a></li>
+                            <li><a href="#" data-translate="terms">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4 data-translate="support">Support</h4>
+                        <ul>
+                            <li><a href="#" data-translate="help_center">Help Center</a></li>
+                            <li><a href="#" data-translate="faq">FAQ</a></li>
+                            <li><a href="#" data-translate="customer_support">Customer Support</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 WORQELY. All rights reserved.</p>
+                </div>
+            </footer>
+        </div>
+
+        <!-- Customer Login Page -->
+        <div id="customer-login" class="page auth-page" style="display: none;">
+            <div class="auth-container">
+                <div class="auth-card">
+                    <button class="back-btn" data-navigate="homepage">
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+                    
+                    <div class="auth-header">
+                        <h2 data-translate="customer_login">Customer Login</h2>
+                        <p data-translate="login_description">Access your WORQELY customer account</p>
+                    </div>
+                    
+                    <form id="customer-login-form" class="auth-form">
+                        <div class="form-group">
+                            <label for="customer-mobile" data-translate="mobile_number">Mobile Number</label>
+                            <input type="tel" id="customer-mobile" name="mobile" required 
+                                   placeholder="Enter your mobile number" pattern="[0-9]{10}">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="customer-password" data-translate="password">Password</label>
+                            <input type="password" id="customer-password" name="password" required 
+                                   placeholder="Enter your password">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-full" data-translate="login">
+                            Login
+                        </button>
+                    </form>
+                    
+                    <div class="auth-footer">
+                        <p data-translate="no_account">Don't have an account? 
+                            <a href="#" data-navigate="customer-signup" data-translate="signup_here">Sign up here</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Customer Signup Page -->
+        <div id="customer-signup" class="page auth-page" style="display: none;">
+            <div class="auth-container">
+                <div class="auth-card">
+                    <button class="back-btn" data-navigate="homepage">
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+                    
+                    <div class="auth-header">
+                        <h2 data-translate="customer_signup">Customer Sign Up</h2>
+                        <p data-translate="signup_description">Create your WORQELY customer account</p>
+                    </div>
+                    
+                    <form id="customer-signup-form" class="auth-form">
+                        <div class="form-group">
+                            <label for="customer-signup-name" data-translate="full_name">Full Name</label>
+                            <input type="text" id="customer-signup-name" name="fullName" required 
+                                   placeholder="Enter your full name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="customer-signup-mobile" data-translate="mobile_number">Mobile Number</label>
+                            <input type="tel" id="customer-signup-mobile" name="mobile" required 
+                                   placeholder="Enter your mobile number" pattern="[0-9]{10}">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="customer-signup-email" data-translate="email">Email (Optional)</label>
+                            <input type="email" id="customer-signup-email" name="email" 
+                                   placeholder="Enter your email address">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="customer-signup-password" data-translate="password">Password</label>
+                            <input type="password" id="customer-signup-password" name="password" required 
+                                   placeholder="Create a strong password">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-full" data-translate="create_account">
+                            Create Account
+                        </button>
+                    </form>
+                    
+                    <div class="auth-footer">
+                        <p data-translate="have_account">Already have an account? 
+                            <a href="#" data-navigate="customer-login" data-translate="login_here">Login here</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Labor Login Page -->
+        <div id="labor-login" class="page auth-page" style="display: none;">
+            <div class="auth-container">
+                <div class="auth-card">
+                    <button class="back-btn" data-navigate="homepage">
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+                    
+                    <div class="auth-header">
+                        <h2 data-translate="worker_login">Worker Login</h2>
+                        <p data-translate="worker_login_description">Access your WORQELY worker account</p>
+                    </div>
+                    
+                    <form id="labor-login-form" class="auth-form">
+                        <div class="form-group">
+                            <label for="labor-mobile" data-translate="mobile_number">Mobile Number</label>
+                            <input type="tel" id="labor-mobile" name="mobile" required 
+                                   placeholder="Enter your mobile number" pattern="[0-9]{10}">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="labor-password" data-translate="password">Password</label>
+                            <input type="password" id="labor-password" name="password" required 
+                                   placeholder="Enter your password">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-full" data-translate="login">
+                            Login
+                        </button>
+                    </form>
+                    
+                    <div class="auth-footer">
+                        <p data-translate="no_account">Don't have an account? 
+                            <a href="#" data-navigate="labor-signup" data-translate="signup_here">Sign up here</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Labor Signup Page -->
+        <div id="labor-signup" class="page auth-page" style="display: none;">
+            <div class="auth-container">
+                <div class="auth-card signup-card">
+                    <button class="back-btn" data-navigate="homepage">
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+                    
+                    <div class="auth-header">
+                        <h2 data-translate="worker_signup">Worker Registration</h2>
+                        <p data-translate="worker_signup_description">Join WORQELY as a verified worker</p>
+                    </div>
+                    
+                    <!-- Progress Indicator -->
+                    <div class="progress-indicator">
+                        <div class="step active" data-step="1">
+                            <div class="step-number">1</div>
+                            <span data-translate="personal_info">Personal Info</span>
+                        </div>
+                        <div class="step" data-step="2">
+                            <div class="step-number">2</div>
+                            <span data-translate="address_details">Address</span>
+                        </div>
+                        <div class="step" data-step="3">
+                            <div class="step-number">3</div>
+                            <span data-translate="work_details">Work Details</span>
+                        </div>
+                        <div class="step" data-step="4">
+                            <div class="step-number">4</div>
+                            <span data-translate="verification">Verification</span>
+                        </div>
+                    </div>
+                    
+                    <form id="labor-signup-form" class="multi-step-form">
+                        <!-- Step 1: Personal Information -->
+                        <div class="form-step active" data-step="1">
+                            <h3 data-translate="personal_information">Personal Information</h3>
+                            
+                            <div class="form-group">
+                                <label for="labor-name" data-translate="full_name">Full Name *</label>
+                                <input type="text" id="labor-name" name="fullName" required 
+                                       placeholder="Enter your full name">
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="labor-mobile" data-translate="mobile_number">Mobile Number *</label>
+                                    <input type="tel" id="labor-mobile" name="mobile" required 
+                                           placeholder="10-digit mobile number" pattern="[0-9]{10}">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="labor-email" data-translate="email">Email</label>
+                                    <input type="email" id="labor-email" name="email" 
+                                           placeholder="your.email@example.com">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="labor-dob" data-translate="date_of_birth">Date of Birth *</label>
+                                    <input type="date" id="labor-dob" name="dateOfBirth" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="labor-aadhaar" data-translate="aadhaar_number">Aadhaar Number *</label>
+                                    <input type="text" id="labor-aadhaar" name="aadhaarNumber" required 
+                                           placeholder="12-digit Aadhaar number" pattern="[0-9]{12}">
+                                </div>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-primary" data-next-step="2">
+                                    Next <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 2: Address Details -->
+                        <div class="form-step" data-step="2">
+                            <h3 data-translate="address_details">Address Details</h3>
+                            
+                            <div class="form-group">
+                                <label for="labor-street" data-translate="street_address">Street Address *</label>
+                                <textarea id="labor-street" name="street" required rows="2" 
+                                          placeholder="House/Flat number, Street name"></textarea>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="labor-city" data-translate="city">City *</label>
+                                    <input type="text" id="labor-city" name="city" required 
+                                           placeholder="Enter your city">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="labor-pincode" data-translate="pincode">PIN Code *</label>
+                                    <input type="text" id="labor-pincode" name="pincode" required 
+                                           placeholder="6-digit PIN code" pattern="[0-9]{6}">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="labor-state" data-translate="state">State *</label>
+                                    <select id="labor-state" name="state" required>
+                                        <option value="">Select State</option>
+                                        <option value="andhra-pradesh">Andhra Pradesh</option>
+                                        <option value="assam">Assam</option>
+                                        <option value="bihar">Bihar</option>
+                                        <option value="gujarat">Gujarat</option>
+                                        <option value="haryana">Haryana</option>
+                                        <option value="karnataka">Karnataka</option>
+                                        <option value="kerala">Kerala</option>
+                                        <option value="maharashtra">Maharashtra</option>
+                                        <option value="odisha">Odisha</option>
+                                        <option value="punjab">Punjab</option>
+                                        <option value="tamil-nadu">Tamil Nadu</option>
+                                        <option value="telangana">Telangana</option>
+                                        <option value="west-bengal">West Bengal</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="labor-country" data-translate="country">Country *</label>
+                                    <select id="labor-country" name="country" required>
+                                        <option value="india">India</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-outline" data-prev-step="1">
+                                    <i class="fas fa-arrow-left"></i> Previous
+                                </button>
+                                <button type="button" class="btn btn-primary" data-next-step="3">
+                                    Next <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 3: Work Details -->
+                        <div class="form-step" data-step="3">
+                            <h3 data-translate="work_details">Work Details</h3>
+                            
+                            <div class="form-group">
+                                <label for="labor-category" data-translate="work_category">Work Category *</label>
+                                <select id="labor-category" name="workCategory" required>
+                                    <option value="">Select Category</option>
+                                    <option value="construction">Construction</option>
+                                    <option value="plumbing">Plumbing</option>
+                                    <option value="electrical">Electrical</option>
+                                    <option value="painting">Painting</option>
+                                    <option value="cleaning">Cleaning</option>
+                                    <option value="driver">Driver</option>
+                                    <option value="cooking">Cooking</option>
+                                    <option value="childcare">Childcare</option>
+                                    <option value="elderly-care">Elderly Care</option>
+                                    <option value="gardening">Gardening</option>
+                                    <option value="security">Security</option>
+                                    <option value="delivery">Delivery</option>
+                                    <option value="carpentry">Carpentry</option>
+                                    <option value="welding">Welding</option>
+                                    <option value="tailoring">Tailoring</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="labor-experience" data-translate="experience">Experience *</label>
+                                    <select id="labor-experience" name="experience" required>
+                                        <option value="">Select Experience</option>
+                                        <option value="0-1">0-1 years</option>
+                                        <option value="1-3">1-3 years</option>
+                                        <option value="3-5">3-5 years</option>
+                                        <option value="5-10">5-10 years</option>
+                                        <option value="10+">10+ years</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="labor-shift" data-translate="preferred_shift">Preferred Shift *</label>
+                                    <select id="labor-shift" name="shiftType" required>
+                                        <option value="">Select Shift</option>
+                                        <option value="full-time">Full Time</option>
+                                        <option value="part-time">Part Time</option>
+                                        <option value="task-based">Task Based</option>
+                                        <option value="flexible">Flexible</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label data-translate="signup_method">Sign-up Method *</label>
+                                <div class="radio-group">
+                                    <label class="radio-option">
+                                        <input type="radio" name="signupMethod" value="self" required>
+                                        <span class="radio-custom"></span>
+                                        <span data-translate="self_signup">Self Sign-up</span>
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="signupMethod" value="cyber-cafe" required>
+                                        <span class="radio-custom"></span>
+                                        <span data-translate="cyber_cafe">Cyber Cafe</span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-outline" data-prev-step="2">
+                                    <i class="fas fa-arrow-left"></i> Previous
+                                </button>
+                                <button type="button" class="btn btn-primary" data-next-step="4">
+                                    Next <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 4: Verification & Authentication -->
+                        <div class="form-step" data-step="4">
+                            <h3 data-translate="verification_authentication">Verification & Authentication</h3>
+                            
+                            <div class="form-group">
+                                <label for="labor-photo" data-translate="profile_photo">Profile Photo *</label>
+                                <div class="file-upload">
+                                    <input type="file" id="labor-photo" name="profilePhoto" accept="image/*" required>
+                                    <div class="file-upload-area">
+                                        <i class="fas fa-camera"></i>
+                                        <span data-translate="upload_photo">Click to upload photo</span>
+                                        <div class="photo-preview" style="display: none;">
+                                            <img id="photo-preview-img" src="" alt="Preview">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="labor-password" data-translate="password">Password *</label>
+                                <input type="password" id="labor-password" name="password" required 
+                                       placeholder="Create a strong password" minlength="8">
+                                <small class="form-hint" data-translate="password_hint">
+                                    Password must be at least 8 characters long
+                                </small>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="labor-confirm-password" data-translate="confirm_password">Confirm Password *</label>
+                                <input type="password" id="labor-confirm-password" name="confirmPassword" required 
+                                       placeholder="Confirm your password">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="checkbox-option">
+                                    <input type="checkbox" name="agreeTerms" required>
+                                    <span class="checkbox-custom"></span>
+                                    <span data-translate="agree_terms">I agree to the Terms of Service and Privacy Policy</span>
+                                </label>
+                            </div>
+                            
+                            <div class="digital-signature-section">
+                                <h4 data-translate="digital_signature">Digital Signature</h4>
+                                <canvas id="signature-canvas" class="signature-canvas"></canvas>
+                                <div class="signature-actions">
+                                    <button type="button" id="clear-signature" class="btn btn-outline btn-small">
+                                        <i class="fas fa-trash"></i> Clear
+                                    </button>
+                                    <span class="signature-status" data-translate="sign_here">Please sign here</span>
+                                </div>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-outline" data-prev-step="3">
+                                    <i class="fas fa-arrow-left"></i> Previous
+                                </button>
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-check"></i> Complete Registration
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    
+                    <div class="auth-footer">
+                        <p data-translate="have_account">Already have an account? 
+                            <a href="#" data-navigate="labor-login" data-translate="login_here">Login here</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Customer Dashboard -->
+        <div id="customer-dashboard" class="page dashboard-page" style="display: none;">
+            <div class="dashboard-container">
+                <!-- Dashboard Header -->
+                <header class="dashboard-header">
+                    <div class="header-content">
+                        <h1>Customer Dashboard</h1>
+                        <div class="user-info">
+                            <span id="customer-name">Welcome, Customer</span>
+                            <button class="btn btn-outline btn-small" id="customer-logout">
+                                <i class="fas fa-sign-out-alt"></i> Logout
+                            </button>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- Dashboard Navigation -->
+                <nav class="dashboard-nav">
+                    <div class="nav-tabs">
+                        <button class="nav-tab active" data-section="service">
+                            <i class="fas fa-tools"></i>
+                            <span data-translate="services">Services</span>
+                        </button>
+                        <button class="nav-tab" data-section="bookings">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span data-translate="bookings">Bookings</span>
+                        </button>
+                        <button class="nav-tab" data-section="ecommerce">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span data-translate="ecommerce">E-Commerce</span>
+                        </button>
+                        <button class="nav-tab" data-section="payment">
+                            <i class="fas fa-credit-card"></i>
+                            <span data-translate="payment">Payment</span>
+                        </button>
+                        <button class="nav-tab" data-section="support">
+                            <i class="fas fa-headset"></i>
+                            <span data-translate="support">Support</span>
+                        </button>
+                        <button class="nav-tab" data-section="rating">
+                            <i class="fas fa-star"></i>
+                            <span data-translate="rating_review">Rating & Review</span>
+                        </button>
+                        <button class="nav-tab" data-section="refer">
+                            <i class="fas fa-users"></i>
+                            <span data-translate="refer_earn">Refer & Earn</span>
+                        </button>
+                        <button class="nav-tab" data-section="issues">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <span data-translate="issues">Issues</span>
+                        </button>
+                    </div>
+                </nav>
+
+                <!-- Dashboard Content -->
+                <main class="dashboard-content">
+                    <!-- Services Section -->
+                    <div id="service-section" class="dashboard-section active">
+                        <h2 data-translate="available_services">Available Services</h2>
+                        <div class="services-grid">
+                            <div class="service-category" data-category="construction">
+                                <div class="service-icon">
+                                    <i class="fas fa-hammer"></i>
+                                </div>
+                                <h3 data-translate="construction">Construction</h3>
+                                <p data-translate="construction_desc">Professional construction workers</p>
+                                <button class="btn btn-primary" data-action="book-service" data-service="construction">
+                                    <i class="fas fa-phone"></i> Call AI Assistant
+                                </button>
+                            </div>
+                            
+                            <div class="service-category" data-category="plumbing">
+                                <div class="service-icon">
+                                    <i class="fas fa-wrench"></i>
+                                </div>
+                                <h3 data-translate="plumbing">Plumbing</h3>
+                                <p data-translate="plumbing_desc">Expert plumbing services</p>
+                                <button class="btn btn-primary" data-action="book-service" data-service="plumbing">
+                                    <i class="fas fa-phone"></i> Call AI Assistant
+                                </button>
+                            </div>
+                            
+                            <div class="service-category" data-category="electrical">
+                                <div class="service-icon">
+                                    <i class="fas fa-bolt"></i>
+                                </div>
+                                <h3 data-translate="electrical">Electrical</h3>
+                                <p data-translate="electrical_desc">Licensed electricians</p>
+                                <button class="btn btn-primary" data-action="book-service" data-service="electrical">
+                                    <i class="fas fa-phone"></i> Call AI Assistant
+                                </button>
+                            </div>
+                            
+                            <div class="service-category" data-category="cleaning">
+                                <div class="service-icon">
+                                    <i class="fas fa-broom"></i>
+                                </div>
+                                <h3 data-translate="cleaning">Cleaning</h3>
+                                <p data-translate="cleaning_desc">Professional cleaning services</p>
+                                <button class="btn btn-primary" data-action="book-service" data-service="cleaning">
+                                    <i class="fas fa-phone"></i> Call AI Assistant
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bookings Section -->
+                    <div id="bookings-section" class="dashboard-section">
+                        <h2 data-translate="my_bookings">My Bookings</h2>
+                        <div class="bookings-list">
+                            <div class="booking-card">
+                                <div class="booking-info">
+                                    <h3>Plumbing Service</h3>
+                                    <p class="booking-date">Date: Today, 2:00 PM</p>
+                                    <p class="booking-worker">Worker: Raj Kumar</p>
+                                </div>
+                                <div class="booking-status">
+                                    <span class="status-badge status-pending">Pending</span>
+                                    <div class="booking-actions">
+                                        <button class="btn btn-small btn-outline">Cancel</button>
+                                        <button class="btn btn-small btn-primary">Contact</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- E-Commerce Section -->
+                    <div id="ecommerce-section" class="dashboard-section">
+                        <h2 data-translate="ecommerce_marketplace">E-Commerce Marketplace</h2>
+                        <div class="ecommerce-categories">
+                            <div class="category-card">
+                                <i class="fas fa-tools"></i>
+                                <h3>Tools & Equipment</h3>
+                                <p>Buy or rent tools for your projects</p>
+                            </div>
+                            <div class="category-card">
+                                <i class="fas fa-hard-hat"></i>
+                                <h3>Safety Equipment</h3>
+                                <p>Essential safety gear for workers</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Payment Section -->
+                    <div id="payment-section" class="dashboard-section">
+                        <h2 data-translate="payment_history">Payment History</h2>
+                        <div class="payment-methods">
+                            <h3>Payment Methods</h3>
+                            <div class="payment-cards">
+                                <div class="payment-card">
+                                    <i class="fas fa-credit-card"></i>
+                                    <span>**** **** **** 1234</span>
+                                    <button class="btn btn-small btn-outline">Remove</button>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary">Add New Payment Method</button>
+                        </div>
+                    </div>
+
+                    <!-- Support Section -->
+                    <div id="support-section" class="dashboard-section">
+                        <h2 data-translate="customer_support">Customer Support</h2>
+                        <div class="support-options">
+                            <div class="support-card">
+                                <i class="fas fa-phone"></i>
+                                <h3>Call Support</h3>
+                                <p>Speak directly with our support team</p>
+                                <button class="btn btn-primary">Call Now</button>
+                            </div>
+                            <div class="support-card">
+                                <i class="fas fa-comments"></i>
+                                <h3>Live Chat</h3>
+                                <p>Chat with our support agents</p>
+                                <button class="btn btn-primary">Start Chat</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Rating & Review Section -->
+                    <div id="rating-section" class="dashboard-section">
+                        <h2 data-translate="rating_review">Rating & Review</h2>
+                        <div class="recent-services">
+                            <h3>Rate Recent Services</h3>
+                            <div class="service-rating">
+                                <div class="service-info">
+                                    <h4>Plumbing Service by Raj Kumar</h4>
+                                    <p>Completed on: Dec 15, 2024</p>
+                                </div>
+                                <div class="rating-input">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <button class="btn btn-primary btn-small">Submit Review</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Refer & Earn Section -->
+                    <div id="refer-section" class="dashboard-section">
+                        <h2 data-translate="refer_earn">Refer & Earn</h2>
+                        <div class="referral-program">
+                            <div class="referral-stats">
+                                <div class="stat-card">
+                                    <h3>₹500</h3>
+                                    <p>Total Earnings</p>
+                                </div>
+                                <div class="stat-card">
+                                    <h3>5</h3>
+                                    <p>Successful Referrals</p>
+                                </div>
+                            </div>
+                            <div class="referral-code">
+                                <h3>Your Referral Code</h3>
+                                <div class="code-display">
+                                    <span id="referral-code">WORK123ABC</span>
+                                    <button class="btn btn-outline btn-small">Copy</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Issues Section -->
+                    <div id="issues-section" class="dashboard-section">
+                        <h2 data-translate="report_issue">Report an Issue</h2>
+                        <div class="issue-form">
+                            <form>
+                                <div class="form-group">
+                                    <label>Issue Type</label>
+                                    <select name="issueType" required>
+                                        <option value="">Select Issue Type</option>
+                                        <option value="payment">Payment Issue</option>
+                                        <option value="service">Service Quality</option>
+                                        <option value="worker">Worker Behavior</option>
+                                        <option value="technical">Technical Problem</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Description</label>
+                                    <textarea name="description" rows="4" placeholder="Describe your issue in detail"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Submit Issue</button>
+                            </form>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+
+        <!-- Labor Dashboard -->
+        <div id="labor-dashboard" class="page dashboard-page" style="display: none;">
+            <div class="dashboard-container">
+                <!-- Dashboard Header -->
+                <header class="dashboard-header">
+                    <div class="header-content">
+                        <h1>Worker Dashboard</h1>
+                        <div class="user-info">
+                            <span id="labor-name">Welcome, Worker</span>
+                            <button class="btn btn-outline btn-small" id="labor-logout">
+                                <i class="fas fa-sign-out-alt"></i> Logout
+                            </button>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- Dashboard Navigation -->
+                <nav class="dashboard-nav">
+                    <div class="nav-tabs">
+                        <button class="nav-tab active" data-section="profile">
+                            <i class="fas fa-user"></i>
+                            <span data-translate="profile">Profile</span>
+                        </button>
+                        <button class="nav-tab" data-section="tasks">
+                            <i class="fas fa-tasks"></i>
+                            <span data-translate="available_tasks">Tasks</span>
+                        </button>
+                        <button class="nav-tab" data-section="shifts">
+                            <i class="fas fa-clock"></i>
+                            <span data-translate="shifts">Shifts</span>
+                        </button>
+                        <button class="nav-tab" data-section="earnings">
+                            <i class="fas fa-money-bill-wave"></i>
+                            <span data-translate="earnings">Earnings</span>
+                        </button>
+                        <button class="nav-tab" data-section="history">
+                            <i class="fas fa-history"></i>
+                            <span data-translate="work_history">History</span>
+                        </button>
+                        <button class="nav-tab" data-section="shg">
+                            <i class="fas fa-users"></i>
+                            <span data-translate="shg">SHG</span>
+                        </button>
+                        <button class="nav-tab" data-section="insurance">
+                            <i class="fas fa-shield-alt"></i>
+                            <span data-translate="insurance">Insurance</span>
+                        </button>
+                        <button class="nav-tab" data-section="premium">
+                            <i class="fas fa-crown"></i>
+                            <span data-translate="premium">Premium</span>
+                        </button>
+                        <button class="nav-tab" data-section="labor-support">
+                            <i class="fas fa-headset"></i>
+                            <span data-translate="support">Support</span>
+                        </button>
+                    </div>
+                </nav>
+
+                <!-- Dashboard Content -->
+                <main class="dashboard-content">
+                    <!-- Profile Section -->
+                    <div id="profile-section" class="dashboard-section active">
+                        <h2 data-translate="profile_management">Profile Management</h2>
+                        <div class="profile-content">
+                            <div class="profile-card">
+                                <div class="profile-photo">
+                                    <img id="worker-profile-photo" src="https://via.placeholder.com/150" alt="Profile Photo">
+                                    <button class="btn btn-small btn-outline">Change Photo</button>
+                                </div>
+                                <div class="profile-info">
+                                    <h3 id="worker-profile-name">Worker Name</h3>
+                                    <p id="worker-category">Construction Worker</p>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <span>4.2 (25 reviews)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Available Tasks Section -->
+                    <div id="tasks-section" class="dashboard-section">
+                        <h2 data-translate="available_tasks">Available Tasks</h2>
+                        <div class="tasks-list">
+                            <div class="task-card">
+                                <div class="task-info">
+                                    <h3>Plumbing Repair</h3>
+                                    <p class="task-location">Location: Koramangala, Bangalore</p>
+                                    <p class="task-payment">Payment: ₹800</p>
+                                    <p class="task-time">Time: 2 hours</p>
+                                </div>
+                                <div class="task-actions">
+                                    <button class="btn btn-primary">Accept Task</button>
+                                    <button class="btn btn-outline">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Shifts Section -->
+                    <div id="shifts-section" class="dashboard-section">
+                        <h2 data-translate="shift_selection">Shift Selection</h2>
+                        <div class="shift-options">
+                            <div class="shift-card">
+                                <h3>Morning Shift</h3>
+                                <p>6:00 AM - 2:00 PM</p>
+                                <label class="switch">
+                                    <input type="checkbox" name="morning-shift">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="shift-card">
+                                <h3>Evening Shift</h3>
+                                <p>2:00 PM - 10:00 PM</p>
+                                <label class="switch">
+                                    <input type="checkbox" name="evening-shift">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Earnings Section -->
+                    <div id="earnings-section" class="dashboard-section">
+                        <h2 data-translate="earnings_tracking">Earnings Tracking</h2>
+                        <div class="earnings-overview">
+                            <div class="earnings-stats">
+                                <div class="stat-card">
+                                    <h3>₹12,500</h3>
+                                    <p>This Month</p>
+                                </div>
+                                <div class="stat-card">
+                                    <h3>₹45,000</h3>
+                                    <p>Total Earnings</p>
+                                </div>
+                                <div class="stat-card">
+                                    <h3>28</h3>
+                                    <p>Jobs Completed</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Work History Section -->
+                    <div id="history-section" class="dashboard-section">
+                        <h2 data-translate="work_history">Work History</h2>
+                        <div class="history-list">
+                            <div class="history-item">
+                                <div class="job-info">
+                                    <h3>Kitchen Plumbing</h3>
+                                    <p>Customer: Priya Sharma</p>
+                                    <p>Date: Dec 10, 2024</p>
+                                </div>
+                                <div class="job-status">
+                                    <span class="status-badge status-completed">Completed</span>
+                                    <span class="earning">₹800</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SHG Section -->
+                    <div id="shg-section" class="dashboard-section">
+                        <h2 data-translate="shg_groups">Self Help Groups (SHG)</h2>
+                        <div class="shg-info">
+                            <div class="shg-card">
+                                <h3>Bangalore Construction Workers SHG</h3>
+                                <p>Members: 25</p>
+                                <p>Monthly Contribution: ₹500</p>
+                                <button class="btn btn-primary">Join Group</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Insurance Section -->
+                    <div id="insurance-section" class="dashboard-section">
+                        <h2 data-translate="insurance_plans">Insurance Plans</h2>
+                        <div class="insurance-plans">
+                            <div class="insurance-card">
+                                <h3>Basic Health Insurance</h3>
+                                <p>Coverage: ₹1,00,000</p>
+                                <p>Premium: ₹200/month</p>
+                                <button class="btn btn-primary">Subscribe</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Premium Section -->
+                    <div id="premium-section" class="dashboard-section">
+                        <h2 data-translate="premium_subscription">Premium Subscription</h2>
+                        <div class="premium-benefits">
+                            <h3>Premium Benefits</h3>
+                            <ul>
+                                <li>Priority in task allocation</li>
+                                <li>Higher earning potential</li>
+                                <li>24/7 customer support</li>
+                                <li>Insurance coverage</li>
+                            </ul>
+                            <button class="btn btn-primary">Upgrade to Premium - ₹99/month</button>
+                        </div>
+                    </div>
+
+                    <!-- Support Section -->
+                    <div id="labor-support-section" class="dashboard-section">
+                        <h2 data-translate="worker_support">Worker Support</h2>
+                        <div class="support-options">
+                            <div class="support-card">
+                                <i class="fas fa-phone"></i>
+                                <h3>Emergency Support</h3>
+                                <p>24/7 emergency helpline</p>
+                                <button class="btn btn-primary">Call Emergency</button>
+                            </div>
+                            <div class="support-card">
+                                <i class="fas fa-comments"></i>
+                                <h3>General Support</h3>
+                                <p>Chat with our support team</p>
+                                <button class="btn btn-primary">Start Chat</button>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+
+        <!-- Admin Panel -->
+        <div id="admin-panel" class="page dashboard-page" style="display: none;">
+            <div class="dashboard-container">
+                <header class="dashboard-header">
+                    <div class="header-content">
+                        <h1>Admin Panel</h1>
+                        <div class="user-info">
+                            <span>Admin Dashboard</span>
+                            <button class="btn btn-outline btn-small" id="admin-logout">
+                                <i class="fas fa-sign-out-alt"></i> Logout
+                            </button>
+                        </div>
+                    </div>
+                </header>
+
+                <nav class="dashboard-nav">
+                    <div class="nav-tabs">
+                        <button class="nav-tab active" data-section="overview">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>Overview</span>
+                        </button>
+                        <button class="nav-tab" data-section="users">
+                            <i class="fas fa-users"></i>
+                            <span>Users</span>
+                        </button>
+                        <button class="nav-tab" data-section="workers">
+                            <i class="fas fa-hard-hat"></i>
+                            <span>Workers</span>
+                        </button>
+                        <button class="nav-tab" data-section="bookings">
+                            <i class="fas fa-calendar"></i>
+                            <span>Bookings</span>
+                        </button>
+                    </div>
+                </nav>
+
+                <main class="dashboard-content">
+                    <div id="overview-section" class="dashboard-section active">
+                        <h2>Platform Overview</h2>
+                        <div class="admin-stats">
+                            <div class="stat-card">
+                                <h3>5,234</h3>
+                                <p>Total Customers</p>
+                            </div>
+                            <div class="stat-card">
+                                <h3>1,847</h3>
+                                <p>Active Workers</p>
+                            </div>
+                            <div class="stat-card">
+                                <h3>12,456</h3>
+                                <p>Completed Jobs</p>
+                            </div>
+                            <div class="stat-card">
+                                <h3>₹2,34,567</h3>
+                                <p>Total Revenue</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="users-section" class="dashboard-section">
+                        <h2>Customer Management</h2>
+                        <div class="users-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Mobile</th>
+                                        <th>Join Date</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Rahul Kumar</td>
+                                        <td>+91 9876543210</td>
+                                        <td>Dec 1, 2024</td>
+                                        <td><span class="status-badge status-active">Active</span></td>
+                                        <td>
+                                            <button class="btn btn-small btn-outline">View</button>
+                                            <button class="btn btn-small btn-outline">Edit</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div id="workers-section" class="dashboard-section">
+                        <h2>Worker Management</h2>
+                        <div class="workers-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Category</th>
+                                        <th>Rating</th>
+                                        <th>Jobs</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Raj Kumar</td>
+                                        <td>Plumbing</td>
+                                        <td>4.5 ⭐</td>
+                                        <td>45</td>
+                                        <td><span class="status-badge status-active">Active</span></td>
+                                        <td>
+                                            <button class="btn btn-small btn-outline">View</button>
+                                            <button class="btn btn-small btn-outline">Edit</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div id="bookings-section" class="dashboard-section">
+                        <h2>Booking Management</h2>
+                        <div class="bookings-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Booking ID</th>
+                                        <th>Customer</th>
+                                        <th>Worker</th>
+                                        <th>Service</th>
+                                        <th>Date</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#WQ001</td>
+                                        <td>Priya Sharma</td>
+                                        <td>Raj Kumar</td>
+                                        <td>Plumbing</td>
+                                        <td>Dec 15, 2024</td>
+                                        <td><span class="status-badge status-pending">Pending</span></td>
+                                        <td>
+                                            <button class="btn btn-small btn-outline">View</button>
+                                            <button class="btn btn-small btn-outline">Edit</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+
+        <!-- AI Call Assistant Modal -->
+        <div id="ai-call-modal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>AI Call Assistant</h3>
+                    <button class="modal-close">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="call-interface">
+                        <div class="ai-avatar">
+                            <i class="fas fa-robot"></i>
+                            <div class="pulse-animation"></div>
+                        </div>
+                        <div class="call-status">
+                            <h4>Connecting you with AI Assistant...</h4>
+                            <p>Please speak your requirements clearly</p>
+                        </div>
+                        <div class="call-actions">
+                            <button class="btn btn-danger" id="end-call">
+                                <i class="fas fa-phone-slash"></i> End Call
+                            </button>
+                            <button class="btn btn-outline" id="mute-call">
+                                <i class="fas fa-microphone-slash"></i> Mute
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/translations.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
