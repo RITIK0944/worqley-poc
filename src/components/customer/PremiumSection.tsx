@@ -18,7 +18,7 @@ import {
   Target,
   Award,
   Sparkles,
-  Priority,
+  // Priority,
   Headphones
 } from 'lucide-react';
 import { User as UserType } from '../../App';
