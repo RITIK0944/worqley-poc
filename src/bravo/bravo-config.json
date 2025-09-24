@@ -1,0 +1,235 @@
+{
+  "project": {
+    "name": "WORQELY",
+    "description": "India's Most Trusted Service Platform - Connecting customers with skilled workers",
+    "version": "1.0.0",
+    "platform": "mobile"
+  },
+  "navigation": {
+    "type": "tab_navigation",
+    "tabs": [
+      {
+        "id": "home",
+        "title": "Home",
+        "icon": "home",
+        "screen": "dashboard"
+      },
+      {
+        "id": "services",
+        "title": "Services",
+        "icon": "briefcase",
+        "screen": "services"
+      },
+      {
+        "id": "tasks",
+        "title": "Tasks",
+        "icon": "list",
+        "screen": "tasks"
+      },
+      {
+        "id": "profile",
+        "title": "Profile",
+        "icon": "user",
+        "screen": "profile"
+      }
+    ]
+  },
+  "screens": {
+    "splash": {
+      "type": "splash",
+      "duration": 3000,
+      "logo": "https://api.worqely.com/assets/logo.png",
+      "background": "linear-gradient(135deg, #030213 0%, #1a1a2e 100%)"
+    },
+    "auth": {
+      "type": "authentication",
+      "methods": ["phone", "email"],
+      "user_types": ["customer", "worker"],
+      "signup_fields": [
+        "fullName",
+        "mobile",
+        "email",
+        "password",
+        "userType",
+        "aadhaarNumber"
+      ]
+    },
+    "dashboard": {
+      "type": "dashboard",
+      "api_endpoint": "/dashboard/stats",
+      "widgets": [
+        {
+          "type": "stats_card",
+          "title": "Quick Stats",
+          "data_source": "dashboard_stats"
+        },
+        {
+          "type": "activity_feed",
+          "title": "Recent Activity",
+          "data_source": "recent_activity"
+        },
+        {
+          "type": "quick_actions",
+          "actions": ["post_task", "find_workers", "view_earnings"]
+        }
+      ]
+    },
+    "services": {
+      "type": "grid_list",
+      "api_endpoint": "/services/categories",
+      "item_layout": {
+        "type": "card",
+        "image_field": "image",
+        "title_field": "name",
+        "subtitle_field": "description",
+        "badge_field": "workers_count"
+      },
+      "actions": {
+        "on_tap": "navigate_to_workers"
+      }
+    },
+    "workers": {
+      "type": "list",
+      "api_endpoint": "/services/categories/{categoryId}/workers",
+      "item_layout": {
+        "type": "worker_card",
+        "avatar_field": "profilePhoto",
+        "name_field": "fullName",
+        "rating_field": "rating",
+        "rate_field": "hourlyRate",
+        "distance_field": "distance",
+        "availability_field": "availability"
+      },
+      "filters": ["rating", "price", "distance", "availability"]
+    },
+    "tasks": {
+      "type": "list",
+      "api_endpoint": "/tasks",
+      "item_layout": {
+        "type": "task_card",
+        "title_field": "title",
+        "description_field": "description",
+        "budget_field": "budget",
+        "location_field": "location",
+        "urgency_field": "urgency",
+        "status_field": "status"
+      },
+      "filters": ["status", "category", "urgency"]
+    },
+    "profile": {
+      "type": "profile",
+      "api_endpoint": "/users/profile",
+      "sections": [
+        {
+          "type": "header",
+          "avatar_field": "profilePhoto",
+          "name_field": "fullName",
+          "subtitle_field": "type"
+        },
+        {
+          "type": "stats",
+          "items": ["rating", "completedJobs", "totalEarnings"]
+        },
+        {
+          "type": "menu",
+          "items": [
+            "edit_profile",
+            "payment_methods",
+            "language_settings",
+            "notifications",
+            "help_support",
+            "logout"
+          ]
+        }
+      ]
+    }
+  },
+  "apis": {
+    "base_url": "https://api.worqely.com/v1",
+    "authentication": {
+      "type": "bearer_token",
+      "header": "Authorization"
+    },
+    "endpoints": {
+      "login": {
+        "method": "POST",
+        "path": "/auth/login",
+        "body": {
+          "mobile": "string",
+          "password": "string",
+          "userType": "string"
+        }
+      },
+      "profile": {
+        "method": "GET",
+        "path": "/users/profile",
+        "requires_auth": true
+      },
+      "services": {
+        "method": "GET",
+        "path": "/services/categories"
+      },
+      "workers": {
+        "method": "GET",
+        "path": "/services/categories/{categoryId}/workers"
+      },
+      "tasks": {
+        "method": "GET",
+        "path": "/tasks",
+        "requires_auth": true
+      },
+      "create_task": {
+        "method": "POST",
+        "path": "/tasks",
+        "requires_auth": true
+      }
+    }
+  },
+  "styling": {
+    "theme": {
+      "primary_color": "#030213",
+      "secondary_color": "#1a1a2e",
+      "accent_color": "#4f46e5",
+      "background_color": "#ffffff",
+      "text_color": "#1a1a1a",
+      "card_background": "#f8f9fa"
+    },
+    "typography": {
+      "heading_font": "Poppins",
+      "body_font": "Inter",
+      "base_size": 16
+    },
+    "spacing": {
+      "base_unit": 8,
+      "card_padding": 16,
+      "screen_margin": 20
+    }
+  },
+  "features": {
+    "offline_support": true,
+    "push_notifications": true,
+    "geolocation": true,
+    "camera_access": true,
+    "payment_integration": true,
+    "social_sharing": true
+  },
+  "localization": {
+    "default_language": "en",
+    "supported_languages": [
+      "en", "hi", "bn", "te", "mr", "ta", 
+      "gu", "kn", "ml", "pa", "or", "as", "ur"
+    ],
+    "api_endpoint": "/translations/{languageCode}"
+  },
+  "data_binding": {
+    "user_session": {
+      "storage": "secure_storage",
+      "fields": ["user_id", "token", "user_type", "language"]
+    },
+    "cache_strategy": {
+      "services": "cache_first",
+      "tasks": "network_first",
+      "profile": "network_first"
+    }
+  }
+}

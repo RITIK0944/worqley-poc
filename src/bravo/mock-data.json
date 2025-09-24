@@ -1,0 +1,324 @@
+{
+  "users": [
+    {
+      "id": "user_001",
+      "fullName": "Rajesh Kumar",
+      "email": "rajesh@example.com",
+      "mobile": "+918340315955",
+      "type": "customer",
+      "profilePhoto": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+      "aadhaarNumber": "1234-5678-9012",
+      "address": {
+        "street": "123 MG Road",
+        "city": "Bangalore",
+        "state": "Karnataka",
+        "pincode": "560001"
+      },
+      "rating": 4.5,
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
+    },
+    {
+      "id": "worker_001",
+      "fullName": "Amit Sharma",
+      "email": "amit@example.com",
+      "mobile": "+918769392447",
+      "type": "worker",
+      "profilePhoto": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+      "aadhaarNumber": "9876-5432-1098",
+      "workCategory": "electrical",
+      "rating": 4.8,
+      "hourlyRate": 250,
+      "experience": "5 years",
+      "availability": "available",
+      "totalEarnings": 125000,
+      "completedJobs": 156,
+      "skills": ["Wiring", "Repairs", "Installation"],
+      "isOnline": true,
+      "isPremium": true
+    }
+  ],
+  "serviceCategories": [
+    {
+      "id": "cat_001",
+      "name": "Electrical",
+      "icon": "⚡",
+      "description": "Wiring, Repairs, Installation",
+      "workers_count": 45,
+      "image": "https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=300&h=200&fit=crop"
+    },
+    {
+      "id": "cat_002",
+      "name": "Plumbing",
+      "icon": "🔧",
+      "description": "Pipes, Installation, Repairs",
+      "workers_count": 38,
+      "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300&h=200&fit=crop"
+    },
+    {
+      "id": "cat_003",
+      "name": "Construction",
+      "icon": "🏗️",
+      "description": "Mason, Labor, Building",
+      "workers_count": 67,
+      "image": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=300&h=200&fit=crop"
+    },
+    {
+      "id": "cat_004",
+      "name": "Painting",
+      "icon": "🎨",
+      "description": "Interior, Exterior, Design",
+      "workers_count": 29,
+      "image": "https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=300&h=200&fit=crop"
+    },
+    {
+      "id": "cat_005",
+      "name": "Cleaning",
+      "icon": "🧹",
+      "description": "Deep Clean, Maintenance",
+      "workers_count": 52,
+      "image": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=300&h=200&fit=crop"
+    },
+    {
+      "id": "cat_006",
+      "name": "Cooking",
+      "icon": "👨‍🍳",
+      "description": "Chef, Home Cook, Catering",
+      "workers_count": 31,
+      "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=300&h=200&fit=crop"
+    }
+  ],
+  "workers": [
+    {
+      "id": "worker_001",
+      "fullName": "Amit Sharma",
+      "profilePhoto": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+      "rating": 4.8,
+      "hourlyRate": 250,
+      "experience": "5 years",
+      "availability": "available",
+      "distance": "2.3 km",
+      "skills": ["Wiring", "Repairs", "Installation"],
+      "category": "electrical",
+      "completedJobs": 156,
+      "isPremium": true
+    },
+    {
+      "id": "worker_002",
+      "fullName": "Ravi Patel",
+      "profilePhoto": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+      "rating": 4.6,
+      "hourlyRate": 200,
+      "experience": "3 years",
+      "availability": "available",
+      "distance": "1.8 km",
+      "skills": ["Pipe Repair", "Installation", "Maintenance"],
+      "category": "plumbing",
+      "completedJobs": 89,
+      "isPremium": false
+    },
+    {
+      "id": "worker_003",
+      "fullName": "Sunita Devi",
+      "profilePhoto": "https://images.unsplash.com/photo-1494790108755-2616b612b618?w=150&h=150&fit=crop&crop=face",
+      "rating": 4.9,
+      "hourlyRate": 180,
+      "experience": "7 years",
+      "availability": "busy",
+      "distance": "3.1 km",
+      "skills": ["Deep Cleaning", "Organization", "Sanitization"],
+      "category": "cleaning",
+      "completedJobs": 234,
+      "isPremium": true
+    }
+  ],
+  "tasks": [
+    {
+      "id": "task_001",
+      "title": "Fix Electrical Wiring",
+      "description": "Need to fix faulty wiring in kitchen. Lights are flickering and some outlets not working.",
+      "category": "electrical",
+      "location": "Koramangala, Bangalore",
+      "budget": 1500,
+      "urgency": "high",
+      "status": "posted",
+      "createdAt": "2024-01-15T10:30:00Z",
+      "deadline": "2024-01-17T18:00:00Z",
+      "customerId": "user_001",
+      "customerName": "Rajesh Kumar",
+      "requirements": ["Basic tools", "Experience with residential wiring"],
+      "contactInfo": {
+        "phone": "+918340315955",
+        "email": "rajesh@example.com"
+      }
+    },
+    {
+      "id": "task_002",
+      "title": "Bathroom Deep Cleaning",
+      "description": "Complete bathroom deep cleaning including tiles, fixtures, and sanitization.",
+      "category": "cleaning",
+      "location": "Indiranagar, Bangalore",
+      "budget": 800,
+      "urgency": "medium",
+      "status": "assigned",
+      "createdAt": "2024-01-14T14:20:00Z",
+      "deadline": "2024-01-16T16:00:00Z",
+      "customerId": "user_002",
+      "customerName": "Priya Singh",
+      "assignedWorkerId": "worker_003",
+      "workerName": "Sunita Devi",
+      "requirements": ["Cleaning supplies", "2-3 hours"]
+    },
+    {
+      "id": "task_003",
+      "title": "Kitchen Pipe Repair",
+      "description": "Kitchen sink pipe is leaking. Need immediate repair.",
+      "category": "plumbing",
+      "location": "Whitefield, Bangalore",
+      "budget": 1200,
+      "urgency": "high",
+      "status": "completed",
+      "createdAt": "2024-01-13T09:15:00Z",
+      "deadline": "2024-01-14T12:00:00Z",
+      "customerId": "user_003",
+      "customerName": "Arjun Reddy",
+      "assignedWorkerId": "worker_002",
+      "workerName": "Ravi Patel",
+      "completedAt": "2024-01-14T11:30:00Z"
+    }
+  ],
+  "dashboardStats": {
+    "customer": {
+      "totalBookings": 12,
+      "completedTasks": 8,
+      "activeBookings": 2,
+      "totalSpent": 15600,
+      "savedAmount": 2340
+    },
+    "worker": {
+      "totalTasks": 156,
+      "completedTasks": 149,
+      "activeTasks": 3,
+      "totalEarnings": 125000,
+      "rating": 4.8,
+      "thisMonthEarnings": 18500
+    }
+  },
+  "recentActivity": [
+    {
+      "id": "activity_001",
+      "type": "task_completed",
+      "title": "Kitchen Pipe Repair Completed",
+      "description": "Successfully completed plumbing work for Arjun Reddy",
+      "timestamp": "2024-01-14T11:30:00Z",
+      "amount": 1200
+    },
+    {
+      "id": "activity_002",
+      "type": "task_assigned",
+      "title": "New Task Assigned",
+      "description": "Bathroom cleaning task assigned in Indiranagar",
+      "timestamp": "2024-01-14T15:45:00Z",
+      "amount": 800
+    },
+    {
+      "id": "activity_003",
+      "type": "payment_received",
+      "title": "Payment Received",
+      "description": "Payment for electrical work completed",
+      "timestamp": "2024-01-13T18:20:00Z",
+      "amount": 1500
+    }
+  ],
+  "languages": [
+    {
+      "code": "en",
+      "name": "English",
+      "nativeName": "English"
+    },
+    {
+      "code": "hi",
+      "name": "Hindi",
+      "nativeName": "हिन्दी"
+    },
+    {
+      "code": "bn",
+      "name": "Bengali",
+      "nativeName": "বাংলা"
+    },
+    {
+      "code": "te",
+      "name": "Telugu",
+      "nativeName": "తెలుగు"
+    },
+    {
+      "code": "mr",
+      "name": "Marathi",
+      "nativeName": "मराठी"
+    },
+    {
+      "code": "ta",
+      "name": "Tamil",
+      "nativeName": "தமிழ்"
+    },
+    {
+      "code": "gu",
+      "name": "Gujarati",
+      "nativeName": "ગુજરાતી"
+    },
+    {
+      "code": "kn",
+      "name": "Kannada",
+      "nativeName": "ಕನ್ನಡ"
+    },
+    {
+      "code": "ml",
+      "name": "Malayalam",
+      "nativeName": "മലയാളം"
+    },
+    {
+      "code": "pa",
+      "name": "Punjabi",
+      "nativeName": "ਪੰਜਾਬੀ"
+    },
+    {
+      "code": "or",
+      "name": "Odia",
+      "nativeName": "ଓଡ଼ିଆ"
+    },
+    {
+      "code": "as",
+      "name": "Assamese",
+      "nativeName": "অসমীয়া"
+    },
+    {
+      "code": "ur",
+      "name": "Urdu",
+      "nativeName": "اردو"
+    }
+  ],
+  "app_config": {
+    "version": "1.0.0",
+    "api_base_url": "https://api.worqely.com/v1",
+    "app_name": "WORQELY",
+    "tagline": "Connecting India's workforce through technology",
+    "support_phone": "+918340315955",
+    "support_email": "worqley@gmail.com",
+    "founder": {
+      "name": "Ritik Kumar",
+      "contact": "+918340315955",
+      "email": "ritiksharma8340031@gmail.com"
+    },
+    "cofounder": {
+      "name": "Rishi Jain",
+      "contact": "+918769392447",
+      "email": "rishijain09414@gmail.com"
+    },
+    "features": {
+      "multilingual": true,
+      "real_time_tracking": true,
+      "payment_integration": true,
+      "rating_system": true,
+      "premium_membership": true
+    }
+  }
+}
