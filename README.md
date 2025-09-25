@@ -1,7 +1,6 @@
+# WORQLEY (Copy)
 
-  # WORQLEY (Copy)
-
-  This is a code bundle for WORQLEY (Copy). The original project is available at https://www.figma.com/design/EOWUH2TIwPea6tyOatqg63/WORQLEY--Copy-.
+This is a code bundle.
 
 ## Running the code
 
@@ -18,4 +17,3 @@ Run `npm run dev` to start the development server.
 5. Set the build command to `npm run build`.
 6. Set the publish directory to `build`.
 7. Click "Create Static Site".
-  
